@@ -1,0 +1,167 @@
+.nova-nav-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  padding: 16px 0;
+  transition: all var(--duration-normal) var(--ease-spring);
+}
+
+.nova-nav-header--scrolled {
+  padding: 10px 0;
+  background: rgba(5, 5, 10, 0.78);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-bottom: 1px solid var(--border-subtle);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+}
+
+.nova-nav-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 48px;
+}
+
+/* Brand */
+.nova-brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+}
+
+.nova-brand__icon-wrap {
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.nova-brand__svg {
+  width: 100%;
+  height: 100%;
+  filter: drop-shadow(0 0 8px rgba(139, 92, 246, 0.4));
+  transition: filter var(--duration-fast);
+}
+
+.nova-brand:hover .nova-brand__svg {
+  filter: drop-shadow(0 0 12px rgba(139, 92, 246, 0.7));
+}
+
+.nova-brand__title {
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  color: var(--text-primary);
+}
+
+.nova-brand__dot {
+  color: var(--accent-primary);
+}
+
+/* Nav Links */
+.nova-nav-links {
+  display: none;
+  align-items: center;
+  gap: 32px;
+  background: rgba(17, 17, 29, 0.55);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  padding: 6px 22px;
+  border-radius: var(--radius-full);
+  border: 1px solid rgba(185, 167, 255, 0.1);
+}
+
+@media (min-width: 768px) {
+  .nova-nav-links {
+    display: flex;
+  }
+}
+
+.nova-nav-link {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+  transition: color var(--duration-fast);
+  text-decoration: none;
+}
+
+.nova-nav-link:hover {
+  color: var(--text-primary);
+}
+
+/* Nav Actions */
+.nova-nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.nova-nav-btn-signin {
+  display: none;
+}
+
+@media (min-width: 640px) {
+  .nova-nav-btn-signin {
+    display: inline-flex;
+  }
+}
+
+.nova-nav-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: var(--radius-md);
+  background: var(--surface-secondary);
+  color: var(--text-primary);
+  border: 1px solid var(--border-solid);
+}
+
+@media (min-width: 768px) {
+  .nova-nav-toggle {
+    display: none;
+  }
+}
+
+/* Mobile Dropdown */
+.nova-nav-mobile {
+  margin-top: 12px;
+  padding: 18px;
+  background: var(--surface-primary);
+  border: 1px solid var(--border-glass);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-lg);
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.nova-nav-mobile__links {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.nova-nav-mobile__link {
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+  padding: 8px 12px;
+  border-radius: var(--radius-sm);
+  transition: all var(--duration-fast);
+}
+
+.nova-nav-mobile__link:hover {
+  background: var(--surface-secondary);
+  color: var(--text-primary);
+}
+
+.nova-btn--full {
+  width: 100%;
+}

@@ -1,0 +1,96 @@
+.nova-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-sans);
+  font-weight: 600;
+  border-radius: var(--radius-md);
+  border: 1px solid transparent;
+  cursor: pointer;
+  transition: background-color var(--duration-fast), border-color var(--duration-fast), box-shadow var(--duration-fast);
+  white-space: nowrap;
+  user-select: none;
+  gap: 8px;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Sizes */
+.nova-btn--sm {
+  padding: 6px 14px;
+  font-size: 0.85rem;
+  border-radius: var(--radius-sm);
+}
+
+.nova-btn--md {
+  padding: 10px 20px;
+  font-size: 0.95rem;
+}
+
+.nova-btn--lg {
+  padding: 14px 28px;
+  font-size: 1.05rem;
+  border-radius: var(--radius-lg);
+}
+
+/* Primary Variant: Electric Violet */
+.nova-btn--primary {
+  background: linear-gradient(135deg, #8B5CF6 0%, #7C3AED 100%);
+  color: #FFFFFF;
+  border-color: rgba(185, 167, 255, 0.35);
+  box-shadow: 0 4px 14px rgba(139, 92, 246, 0.35);
+}
+
+.nova-btn--primary:hover {
+  background: linear-gradient(135deg, #9D74FF 0%, #8B5CF6 100%);
+  box-shadow: 0 6px 20px rgba(139, 92, 246, 0.5), 0 0 12px rgba(185, 167, 255, 0.4);
+}
+
+.nova-btn--glow {
+  box-shadow: 0 0 25px rgba(139, 92, 246, 0.55), 0 4px 14px rgba(0, 0, 0, 0.4);
+}
+
+/* Secondary Variant */
+.nova-btn--secondary {
+  background: var(--surface-secondary);
+  color: var(--text-primary);
+  border-color: var(--border-solid);
+}
+
+.nova-btn--secondary:hover {
+  background: var(--surface-elevated);
+  border-color: var(--border-glow);
+  color: #FFFFFF;
+}
+
+/* Glass Variant */
+.nova-btn--glass {
+  background: var(--surface-glass);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  color: var(--text-primary);
+  border-color: var(--border-glass);
+}
+
+.nova-btn--glass:hover {
+  background: var(--surface-glass-active);
+  border-color: var(--border-glow);
+  color: #FFFFFF;
+}
+
+/* Ghost Variant */
+.nova-btn--ghost {
+  background: transparent;
+  color: var(--text-secondary);
+}
+
+.nova-btn--ghost:hover {
+  background: rgba(139, 92, 246, 0.08);
+  color: var(--text-primary);
+}
+
+.nova-btn__icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}

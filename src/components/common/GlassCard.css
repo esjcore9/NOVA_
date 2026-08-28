@@ -1,0 +1,45 @@
+.nova-card {
+  position: relative;
+  background: var(--surface-glass);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid var(--border-glass);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+  transition: border-color var(--duration-normal), box-shadow var(--duration-normal), transform var(--duration-normal);
+  overflow: hidden;
+}
+
+.nova-card__inner {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+}
+
+/* Paddings */
+.nova-card--p-none { padding: 0; }
+.nova-card--p-sm { padding: 14px; }
+.nova-card--p-md { padding: 24px; }
+.nova-card--p-lg { padding: 36px; }
+
+/* Variants */
+.nova-card--surface {
+  background: var(--surface-primary);
+  border-color: var(--border-solid);
+}
+
+.nova-card--glow {
+  border-color: rgba(139, 92, 246, 0.4);
+  box-shadow: var(--shadow-md), 0 0 28px rgba(139, 92, 246, 0.15);
+}
+
+.nova-card--interactive {
+  cursor: pointer;
+}
+
+.nova-card--interactive:hover {
+  border-color: rgba(185, 167, 255, 0.4);
+  box-shadow: var(--shadow-lg), 0 0 32px rgba(139, 92, 246, 0.2);
+  transform: translateY(-3px);
+}

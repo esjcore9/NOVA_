@@ -1,0 +1,69 @@
+/* Digital-Fabric Micro-Grid & Ambient Lighting */
+
+.fabric-container {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  overflow: hidden;
+  background-color: var(--bg-canvas);
+}
+
+.fabric-canvas {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.85;
+}
+
+/* Subtle Ambient Violet/Blue Radial Underlays */
+.ambient-glow-primary {
+  position: absolute;
+  top: -15%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 900px;
+  height: 600px;
+  background: radial-gradient(circle, rgba(139, 92, 246, 0.18) 0%, rgba(91, 140, 255, 0.06) 45%, transparent 70%);
+  filter: blur(80px);
+  pointer-events: none;
+  border-radius: 50%;
+}
+
+.ambient-glow-secondary {
+  position: absolute;
+  bottom: 10%;
+  right: -10%;
+  width: 700px;
+  height: 500px;
+  background: radial-gradient(circle, rgba(139, 92, 246, 0.1) 0%, rgba(185, 167, 255, 0.04) 50%, transparent 70%);
+  filter: blur(90px);
+  pointer-events: none;
+  border-radius: 50%;
+}
+
+.ambient-glow-tertiary {
+  position: absolute;
+  top: 45%;
+  left: -15%;
+  width: 600px;
+  height: 500px;
+  background: radial-gradient(circle, rgba(91, 140, 255, 0.08) 0%, rgba(139, 92, 246, 0.04) 50%, transparent 75%);
+  filter: blur(100px);
+  pointer-events: none;
+  border-radius: 50%;
+}
+
+/* Static Micro-grid CSS fallback / overlay layer */
+.fabric-grid-overlay {
+  position: absolute;
+  inset: 0;
+  background-image: 
+    radial-gradient(rgba(185, 167, 255, 0.12) 1px, transparent 1px);
+  background-size: 24px 24px;
+  mask-image: radial-gradient(ellipse 80% 80% at 50% 30%, #000 30%, transparent 85%);
+  -webkit-mask-image: radial-gradient(ellipse 80% 80% at 50% 30%, #000 30%, transparent 85%);
+  opacity: 0.45;
+  pointer-events: none;
+}

@@ -1,0 +1,6 @@
+node_modules/
+dist/
+*.lnk
+.env
+.env.*
+!.env.example

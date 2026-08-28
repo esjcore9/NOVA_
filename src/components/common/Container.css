@@ -1,0 +1,34 @@
+.nova-container {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+@media (min-width: 640px) {
+  .nova-container {
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+}
+
+.nova-container--sm {
+  max-width: 640px;
+}
+
+.nova-container--md {
+  max-width: 860px;
+}
+
+.nova-container--lg {
+  max-width: 1140px;
+}
+
+.nova-container--xl {
+  max-width: 1280px;
+}
+
+.nova-container--full {
+  max-width: 100%;
+}

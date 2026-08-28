@@ -1,0 +1,126 @@
+.nova-footer {
+  position: relative;
+  padding: 60px 0 50px 0;
+  z-index: 1;
+}
+
+.nova-footer__cta-wrap {
+  margin-bottom: 70px;
+}
+
+.nova-footer-cta-card {
+  border-radius: var(--radius-xl);
+  background: linear-gradient(135deg, rgba(17, 17, 29, 0.9) 0%, rgba(11, 11, 20, 0.95) 100%);
+  border: 1px solid rgba(139, 92, 246, 0.35);
+  box-shadow: 0 0 50px rgba(139, 92, 246, 0.15);
+}
+
+.nova-footer-cta__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  max-width: 650px;
+  margin: 0 auto;
+  gap: 16px;
+  padding: 20px 0;
+}
+
+.nova-footer-cta__title {
+  font-size: 2.25rem;
+  line-height: 1.2;
+  color: var(--text-primary);
+}
+
+@media (min-width: 768px) {
+  .nova-footer-cta__title {
+    font-size: 2.85rem;
+  }
+}
+
+.nova-footer-cta__subtitle {
+  font-size: 1.05rem;
+  color: var(--text-secondary);
+  margin-bottom: 12px;
+}
+
+.nova-footer-cta__actions {
+  display: flex;
+  gap: 14px;
+}
+
+/* Footer Bottom */
+.nova-footer__bottom {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  padding-top: 40px;
+  border-top: 1px solid var(--border-subtle);
+}
+
+@media (min-width: 768px) {
+  .nova-footer__bottom {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
+.nova-footer__brand-col {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-width: 380px;
+}
+
+.nova-footer__tagline {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  line-height: 1.5;
+}
+
+.nova-footer__status-col {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: flex-start;
+}
+
+@media (min-width: 768px) {
+  .nova-footer__status-col {
+    align-items: flex-end;
+  }
+}
+
+.nova-status-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 4px 12px;
+  background: var(--surface-primary);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-full);
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--highlight-lavender);
+}
+
+.nova-status-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #10B981;
+  box-shadow: 0 0 6px #10B981;
+}
+
+.nova-footer__copy {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.nova-heart {
+  color: var(--accent-primary);
+}

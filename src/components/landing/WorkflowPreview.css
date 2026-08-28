@@ -1,0 +1,213 @@
+.nova-workflow {
+  position: relative;
+  padding: 100px 0;
+  z-index: 1;
+}
+
+.nova-workflow__header {
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto 50px auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+.nova-workflow__title {
+  font-size: 2.25rem;
+  line-height: 1.2;
+  color: var(--text-primary);
+}
+
+@media (min-width: 768px) {
+  .nova-workflow__title {
+    font-size: 3rem;
+  }
+}
+
+.nova-workflow__subtitle {
+  font-size: 1.05rem;
+  color: var(--text-secondary);
+}
+
+/* Workflow Step Tabs */
+.nova-workflow__nav {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 12px;
+  margin-bottom: 36px;
+}
+
+@media (min-width: 768px) {
+  .nova-workflow__nav {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.nova-workflow-tab {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 16px;
+  background: var(--surface-primary);
+  border: 1px solid var(--border-solid);
+  border-radius: var(--radius-lg);
+  text-align: left;
+  cursor: pointer;
+  transition: all var(--duration-fast);
+  position: relative;
+}
+
+.nova-workflow-tab:hover {
+  background: var(--surface-secondary);
+  border-color: rgba(139, 92, 246, 0.3);
+}
+
+.nova-workflow-tab--active {
+  background: rgba(139, 92, 246, 0.12);
+  border-color: var(--accent-primary);
+  box-shadow: 0 0 16px rgba(139, 92, 246, 0.2);
+}
+
+.nova-workflow-tab__num {
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--accent-primary);
+  padding: 4px 8px;
+  border-radius: var(--radius-sm);
+  background: rgba(139, 92, 246, 0.15);
+}
+
+.nova-workflow-tab__content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.nova-workflow-tab__title-row {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.nova-workflow-tab__icon {
+  color: var(--highlight-lavender);
+}
+
+.nova-workflow-tab__title {
+  font-family: var(--font-display);
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.nova-workflow-tab__sub {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+}
+
+.nova-workflow-tab__arrow-wrap {
+  display: none;
+}
+
+@media (min-width: 1024px) {
+  .nova-workflow-tab__arrow-wrap {
+    display: block;
+    color: var(--text-muted);
+  }
+}
+
+/* Stage Display Card */
+.nova-workflow__card {
+  border-radius: var(--radius-xl);
+}
+
+.nova-workflow-detail {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 36px;
+}
+
+@media (min-width: 860px) {
+  .nova-workflow-detail {
+    grid-template-columns: 1fr 1.2fr;
+    align-items: center;
+  }
+}
+
+.nova-workflow-detail__info {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.nova-workflow-detail__badge-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.nova-workflow-detail__tag {
+  font-size: 0.8rem;
+  color: var(--highlight-lavender);
+  font-family: var(--font-mono);
+}
+
+.nova-workflow-detail__heading {
+  font-size: 1.85rem;
+  color: var(--text-primary);
+  line-height: 1.2;
+}
+
+.nova-workflow-detail__desc {
+  font-size: 0.98rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  margin-bottom: 8px;
+}
+
+/* Terminal Card */
+.nova-workflow-detail__terminal {
+  background: #07070E;
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.6);
+}
+
+.nova-terminal-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 18px;
+  background: var(--surface-primary);
+  border-bottom: 1px solid var(--border-solid);
+}
+
+.nova-terminal-file {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  color: var(--text-primary);
+  font-weight: 500;
+}
+
+.nova-terminal-body {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.nova-terminal-line {
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  line-height: 1.5;
+  color: var(--highlight-lavender);
+  background: rgba(139, 92, 246, 0.08);
+  padding: 10px 14px;
+  border-radius: var(--radius-sm);
+  border-left: 3px solid var(--accent-primary);
+}

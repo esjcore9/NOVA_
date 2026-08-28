@@ -1,0 +1,65 @@
+.nova-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 10px;
+  font-family: var(--font-sans);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  border-radius: var(--radius-full);
+  text-transform: uppercase;
+  width: fit-content;
+}
+
+/* Variants */
+.nova-badge--violet {
+  background: rgba(139, 92, 246, 0.15);
+  color: var(--highlight-lavender);
+  border: 1px solid rgba(139, 92, 246, 0.35);
+  box-shadow: 0 0 10px rgba(139, 92, 246, 0.15);
+}
+
+.nova-badge--blue {
+  background: rgba(91, 140, 255, 0.15);
+  color: #9EC0FF;
+  border: 1px solid rgba(91, 140, 255, 0.3);
+}
+
+.nova-badge--lavender {
+  background: rgba(185, 167, 255, 0.15);
+  color: var(--text-primary);
+  border: 1px solid rgba(185, 167, 255, 0.3);
+}
+
+.nova-badge--outline {
+  background: transparent;
+  color: var(--text-secondary);
+  border: 1px solid var(--border-solid);
+}
+
+.nova-badge--subtle {
+  background: var(--surface-secondary);
+  color: var(--text-secondary);
+  border: 1px solid var(--border-subtle);
+}
+
+/* Glowing Indicator Dot */
+.nova-badge__dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #8B5CF6;
+  box-shadow: 0 0 6px #8B5CF6;
+  animation: pulse-dot 2s infinite ease-in-out;
+}
+
+@keyframes pulse-dot {
+  0%, 100% { opacity: 0.6; transform: scale(0.9); }
+  50% { opacity: 1; transform: scale(1.15); }
+}
+
+.nova-badge__icon {
+  display: flex;
+  align-items: center;
+}
